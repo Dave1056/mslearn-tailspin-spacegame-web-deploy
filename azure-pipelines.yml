@@ -13,9 +13,9 @@ pool:
 
 steps:
 - task: UseDotNet@2
-  displayName: 'Use .NET Core SDK 2.171.3'
+  displayName: 'Use .NET Core SDK 2.2.7
   inputs:
-    version: 2.1
+    version: 2.2.7
 
 - task: Npm@1
   displayName: 'Run npm install'
