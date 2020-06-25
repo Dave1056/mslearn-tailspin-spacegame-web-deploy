@@ -1,9 +1,6 @@
 trigger:
 - '*'
 
-variables:
-  buildConfiguration: 'Release'
-
 stages:
 - stage: 'Build'
   displayName: 'Build the web application'
@@ -18,6 +15,7 @@ stages:
     variables:
       wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
       dotnetSdkVersion: '2.2.101'
+      buildConfiguration: 'Release'
 
     steps:
     - task: UseDotNet@2
@@ -73,6 +71,7 @@ stages:
     pool:
       vmImage: 'ubuntu-18.04'
     environment: dev
+    
     variables:
     - group: Release
     strategy:
